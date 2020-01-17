@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Countries = (props) => {
+
     let us = props.data.filter(el => el.country === 'United States')
     let brazil = props.data.filter(el => el.country === 'Brazil')
     let france = props.data.filter(el => el.country === 'France')
@@ -15,91 +16,91 @@ const Countries = (props) => {
     let spain = props.data.filter(el => el.country === 'Spain')
     let norway = props.data.filter(el => el.country === 'Norway')
     let argentina = props.data.filter(el => el.country === 'Argentina')
-    console.log(props.data)
+    
     return (
         <div>
             <div>
                 <h1>United States</h1>
                 {us.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Brazil</h1>
                 {brazil.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>France</h1>
                 {france.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Sweden</h1>
                 {sweden.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Netherlands</h1>
                 {netherlands.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Australia</h1>
                 {australia.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Chile</h1>
                 {chile.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>England</h1>
                 {england.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Italy</h1>
                 {italy.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Germany</h1>
                 {germany.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Canada</h1>
                 {canada.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Spain</h1>
                 {spain.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Norway</h1>
                 {norway.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
             <div>
                 <h1>Argentina</h1>
                 {argentina.map(el => (
-                    <p>{el.name} {el.searches}</p>
+                    <p key={el.id}>{el.name} was searched {el.searches} times</p>
                 ))}
             </div>
         </div>

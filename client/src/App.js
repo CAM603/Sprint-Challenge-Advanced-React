@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: [],
+      data: []
     }
   }
   componentDidMount() {
@@ -16,12 +16,13 @@ class App extends React.Component {
     .get(`http://localhost:5000/api/players`)
     .then(res => {
       this.setState({data: res.data})
+      this.setState({poop: res.data.filter(el => el.country === 'United States')})
     })
     .catch(err => console.log(err))
   }
   
-
   render() {
+    
     return (
       <div className="App">
         <Navigation/>
