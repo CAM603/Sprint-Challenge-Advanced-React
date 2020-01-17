@@ -6,7 +6,9 @@ import Navigation from './components/Navigation';
 class App extends React.Component {
   constructor() {
     super();
-
+    this.state = {
+      data: []
+    }
   }
   componentDidMount() {
     axios
@@ -18,7 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
+        <Navigation/>
         
       </div>
     );
