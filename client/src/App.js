@@ -1,13 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
+import Navigation from './components/Navigation';
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+
+  }
+  componentDidMount() {
+    axios
+    .get(`http://localhost:5000/api/players`)
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err))
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Navigation />
+        
+      </div>
+    );
+  }
 }
 
 export default App;
