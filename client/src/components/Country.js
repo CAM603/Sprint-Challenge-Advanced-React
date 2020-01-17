@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Country = (props) => {
-    console.log(props.el)
+const Country = ({person}) => {
+    console.log(person)
+
     return (
         <div>
-            <p>Name: {props.el.name} searches: {props.el.searches} </p>
+            <p>{person.country}</p>
         </div>
     )
 }

@@ -12,8 +12,11 @@ const Navigation = () => {
         <div>
             <button
             onClick={toggleMode}
-            className={darkMode ? 'toggle toggled' : 'toggle'}>
+            className={darkMode ? 'toggle toggled' : 'toggle'}
+            data-testid="toggle-btn"
+            >
             {darkMode ? 'Light Mode' : 'Dark Mode'}
+            
             </button>
         </div>
     )

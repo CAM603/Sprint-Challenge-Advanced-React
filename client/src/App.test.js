@@ -1,9 +1,20 @@
 import React from 'react';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+afterEach(cleanup);
+
+test('App renders', () => {
+  render(<App />);
+})
+
+test('Toggle button changes text', () => {
+  const app = render(<App />);
+
+  const toggleBtn = app.getByTestId('toggle-btn');
+  
+  fireEvent.click(toggleBtn);
+  expect(toggleBtn.textContent).toBe('Light Mode');
+  
 });
